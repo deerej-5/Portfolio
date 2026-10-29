@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SJV Group App & Web UX — S.P. Deerej</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<nav><strong>S.P. Deerej</strong><div><a href="#problems">Problems</a><a href="#screens">Screens</a><a href="#process">Process</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+  <div>
+    <h1>A chit fund app that shows every rupee, every month.</h1>
+    <p class="lede">UI/UX concept for SJV Group by S.P. Deerej. Subscribers should always know what they pay, when the auction is, and what their dividend is, without calling the office.</p>
+    <div class="btns"><a class="btn" href="#screens">See the screens</a><a class="btn alt" href="#contact">Discuss the project</a></div>
+  </div>
+  <div class="calc" aria-labelledby="ct">
+    <h2 id="ct">Know your chit before you join</h2>
+    <p class="sub">A feature idea for the app: an instant, plain-language calculator.</p>
+    <label for="v">Chit value</label>
+    <select id="v"><option value="100000">₹1,00,000</option><option value="200000">₹2,00,000</option><option value="500000" selected>₹5,00,000</option><option value="1000000">₹10,00,000</option></select>
+    <label for="n">Duration <span id="nl"></span></label>
+    <input id="n" type="range" min="20" max="50" step="5" value="25">
+    <label for="d">Auction discount bid <span id="dl"></span></label>
+    <input id="d" type="range" min="0" max="30" step="1" value="15">
+    <div class="out" aria-live="polite">
+      <div class="row"><span>Monthly installment</span><span id="r1"></span></div>
+      <div class="row"><span>Dividend each member gets</span><span id="r2"></span></div>
+      <div class="row"><span>Auction winner receives</span><span id="r3"></span></div>
+      <div class="row big"><span>You pay this month</span><span id="r4"></span></div>
+    </div>
+    <p class="fine">Illustration only. Assumes one member per month and a 5% foreman commission. Real figures follow SJV Group’s chit agreement.</p>
+  </div>
+</header>
+</div>
+
+<section id="problems"><div class="wrap">
+  <h2 class="t">What I would fix first</h2>
+  <p class="intro">These are hypotheses from how chit funds usually work. I would confirm them with SJV’s subscribers and agents in the first week.</p>
+  <div class="grid3">
+    <div class="pt"><h3>Trust and transparency</h3><p>Show the full passbook, the commission and the auction result for every chit, so nobody has to ask what happened.</p></div>
+    <div class="pt"><h3>Missed due dates</h3><p>Clear reminders and one-tap UPI payment, so a late fee never comes as a surprise.</p></div>
+    <div class="pt"><h3>Confusing auction terms</h3><p>Explain discount, dividend and prize amount in plain words, in English and regional languages.</p></div>
+  </div>
+</div></section>
+
+<section id="screens"><div class="wrap">
+  <h2 class="t">Core subscriber screens</h2>
+  <p class="intro">Low-detail concept screens for the first version. Final designs would be built in Figma and tested with real subscribers.</p>
+  <div class="phones">
+    <div class="ph"><div class="scr">
+      <b>Hello, Ravi</b><span style="color:var(--muted)">2 active chits</span>
+      <div class="card"><small>Next installment due in 4 days</small><strong>₹17,000</strong><div class="bar"><i style="width:70%"></i></div></div>
+      <div class="cta">Pay with UPI</div>
+      <div class="card"><small>₹5,00,000 chit · Month 8 of 25</small><span class="pill">Auction on 12th</span></div>
+      <div class="card"><small>₹1,00,000 chit · Month 3 of 20</small><span class="pill">Paid</span></div>
+    </div><p><b>Home.</b> The next payment is the first thing you see.</p></div>
+
+    <div class="ph"><div class="scr">
+      <b>Monthly auction</b><span style="color:var(--muted)">Closes today, 5:00 PM</span>
+      <div class="card"><small>Chit value</small><strong>₹5,00,000</strong></div>
+      <div class="card"><small>Your bid</small><strong>12% = ₹60,000</strong><small>You would receive ₹4,40,000</small></div>
+      <div class="card"><small>Highest bid so far</small><strong>14%</strong></div>
+      <div class="cta">Place bid</div>
+    </div><p><b>Auction.</b> Every bid shows what you would actually receive.</p></div>
+
+    <div class="ph"><div class="scr">
+      <b>Passbook</b><span style="color:var(--muted)">₹5,00,000 chit</span>
+      <div class="li"><span>Month 8</span><span>₹17,000 paid</span></div>
+      <div class="li"><span>Month 7</span><span>₹17,200 paid</span></div>
+      <div class="li"><span>Month 6</span><span>₹16,900 paid</span></div>
+      <div class="li"><span>Month 5</span><span>₹17,100 paid</span></div>
+      <div class="cta">Download statement</div>
+    </div><p><b>Passbook.</b> Every payment and dividend in one place, with a PDF.</p></div>
+  </div>
+</div></section>
+
+<section id="process"><div class="wrap">
+  <h2 class="t">How I would run this project</h2>
+  <div class="grid3">
+    <div class="pt"><h3>Week 1: Listen</h3><p>Talk to subscribers, agents and branch staff. Map how a chit works today, from joining to prize payout.</p></div>
+    <div class="pt"><h3>Weeks 2–3: Design</h3><p>User flows, wireframes and a clickable Figma prototype for the subscriber app and the website.</p></div>
+    <div class="pt"><h3>Week 4: Test and hand off</h3><p>Usability tests with real subscribers, then a design system and developer-ready files.</p></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap about">
+  <div class="avatar" aria-label="Photo placeholder">SPD</div>
+  <div>
+    <h2 class="t">About me</h2>
+    <p>I’m S.P. Deerej, a UI/UX designer who likes making money and trust-heavy products simple to understand. I start with real users, test early with prototypes and keep interfaces clear and accessible.</p>
+    <ul class="skills"><li>User research</li><li>Wireframing</li><li>Prototyping</li><li>Design systems</li><li>Usability testing</li><li>Figma</li></ul>
+    <div class="btns" style="margin-top:26px"><a class="btn" href="mailto:deerejdeerej5@gmail.com">deerejdeerej5@gmail.com</a><a class="btn alt" href="https://www.linkedin.com/in/deerej-s-p-a343792b8" target="_blank" rel="noopener">LinkedIn</a></div>
+  </div>
+</div></section>
+<footer><div class="wrap">© 2026 S.P. Deerej · Concept work for SJV Group</div></footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
